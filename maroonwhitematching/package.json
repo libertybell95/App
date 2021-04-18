@@ -1,48 +1,28 @@
 {
-  "name": "maroonwhitematching",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@auth0/auth0-react": "^1.4.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
-    "chart.js": "2.9.4",
-    "ng2-charts": "^2.4.2",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.5.2",
-    "react-chartjs-2": "^2.11.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0",
-    "react-json-pretty": "^2.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
+  "name": "nodejs-express-mysql",
+  "version": "1.0.0",
+  "description": "Node.js Restful CRUD API with Node.js, Express and MySQL",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "nodejs",
+    "express",
+    "pg",
+    "restapi"
+  ],
+  "author": "krishankantray",
+  "license": "KK",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.95.4",
+    "mysql": "^2.17.1",
+    "pg": "^8.6.0",
+    "react-csv-reader": "^3.3.0"
   }
 }
