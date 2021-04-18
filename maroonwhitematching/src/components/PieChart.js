@@ -4,7 +4,6 @@ import { Pie } from 'react-chartjs-2';
 
 const PieChart = () => {
   return(
-      <div>
         <Pie
           data = {{
             labels: ['Freshman', 'Sophmore', 'Junior', 'Senior'],
@@ -27,11 +26,10 @@ const PieChart = () => {
             },
             ],
           }}
-          height = {10}
-          width = {20}
+          height = {50}
+          width = {50}
           options={{ maintainAspectRatio: false}}
         />
-      </div>
   );
 }
 

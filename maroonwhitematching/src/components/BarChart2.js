@@ -4,7 +4,6 @@ import { Bar } from 'react-chartjs-2';
 
 const BarChart2 = () => {
   return(
-      <div>
         <Bar
           data = {{
             labels: ['Industrial Distribution', 'Business', 'Biomedical Sciences', 'Communactions'],
@@ -27,11 +26,10 @@ const BarChart2 = () => {
             },
             ],
           }}
-          height = {10}
-          width = {20}
-          options={{ maintainAspectRatio: false }}
+          height = {50}
+          width = {50}
+          options={{ maintainAspectRatio: false}}
         />
-      </div>
   );
 }
 

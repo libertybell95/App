@@ -4,13 +4,12 @@ import { Bar } from 'react-chartjs-2';
 
 const BarChart = () => {
   return(
-      <div>
         <Bar
           data = {{
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['Easy Going', 'Organized', 'Funny', 'Outdoorsy', 'Intellectual', 'Introverted'],
             datasets: [{
               label: 'Common Personality Types',
-              data: [12,19,3,5,3,5],
+              data: [300,180,150,140,100,70],
               backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -31,11 +30,10 @@ const BarChart = () => {
             },
             ],
           }}
-          height = {10}
-          width = {20}
-          options={{ maintainAspectRatio: false }}
+          height = {50}
+          width = {50}
+          options={{ maintainAspectRatio: false}}
         />
-      </div>
   );
 }
 
