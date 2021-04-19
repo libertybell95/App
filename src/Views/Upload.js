@@ -35,11 +35,9 @@ class Upload extends Component {
     fetch("https://maroonandwhiteserver.herokuapp.com/bulkcreate", {
       method: "POST",
       headers: {
-        'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      credentials: 'include',
       body: d,
     })
       .then((response) => {
