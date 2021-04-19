@@ -94,7 +94,7 @@ class Upload extends Component {
     //   });
     const url = "https://maroonandwhiteserver.herokuapp.com/customers";
     const response = await fetch(url);
-    const data await response.json();
+    const data = await response.json();
     console.log(data);
 
   };
