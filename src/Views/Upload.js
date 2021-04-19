@@ -79,14 +79,13 @@ class Upload extends Component {
           this.setState({loading:false});
           return response.json();
         } else {
-          console.log(data);
           throw new Error("Something went wrong");
         }
       })
       .then((data) => {
         this.setState({tabledata:data});
         this.setState({showTable:true});
-        //console.log(data);
+        console.log(data);
       })
       .catch((err) => {
         this.setState({error:true});
