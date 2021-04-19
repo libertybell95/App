@@ -68,26 +68,25 @@ class Upload extends Component {
   loadClickHandler = () => {
     //
     this.setState({loading:true});
-    const url = "https://maroonandwhiteserver.herokuapp.com/customers"
-    fetch(url, {
+    fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
       mode: 'no-cors',
       headers: {
         'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
       },
     })
-    console.log(data);
       .then((response) => {
         if (response.ok) {
           this.setState({loading:false});
           return response.json();
         } else {
+          console.log(data);
           throw new Error("Something went wrong");
         }
       })
       .then((data) => {
         this.setState({tabledata:data});
         this.setState({showTable:true});
-        console.log(data);
+        //console.log(data);
       })
       .catch((err) => {
         this.setState({error:true});
