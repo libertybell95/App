@@ -12,7 +12,12 @@ app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:500
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors());
+const corsOptions = {
+    origin: 'https://maroonandwhite-matching.herokuapp.com',
+    credentials: true,
+
+}
+app.use(cors(corsOptions));
 
 // simple route
 app.get("/", (req, res) => {
