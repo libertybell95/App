@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:500
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: 'https://maroonandwhite-matching.herokuapp.com/',
+  origin: 'https://maroonandwhite-matching.herokuapp.com',
   credentials: true
 }));
 
