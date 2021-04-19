@@ -2,7 +2,7 @@
   color: #800000;
   font-size: 30px;
   display: flex;
-  height: 0vh;
+  height: 10vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
@@ -22,6 +22,13 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 27px;
+    color: #800000;
+    width: 20em
+}
+
+.parragraph2 {
+    margin-left: 270px;
+    font-size: 35px;
     color: #800000;
     width: 20em
 }
@@ -53,6 +60,82 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 10;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center3 {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center4 {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center5 {
+  top: 10%;
+  left: 200%;
+}
+
+.chart1 {
+  position: relative;
+  width: 1000px;
+  height: 250px;
+  top: 40px;
+  right: -300px;
+  border: 3px solid #800000;
+}
+
+.chart2 {
+  position: relative;
+  width: 1000px;
+  height: 250px;
+  top: 40px;
+  right: -300px;
+  border: 3px solid #800000;;
+}
+
+.chart3 {
+  position: relative;
+  width: 1000px;
+  height: 250px;
+  top: 40px;
+  right: -300px;
+  border: 3px solid #800000;;
+}
+
+.chart4 {
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  top: 40px;
+  right: -300px;
+  border: 3px solid #800000;;
+}
+
+.chart5 {
+  position: relative;
+  width: 1000px;
+  top: 40px;
+  right: -300px;
+  border: 3px solid #800000;;
 }
 
 .table, th, td{

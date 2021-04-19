@@ -9,12 +9,14 @@ function HomePage(){
 
   return(
     <>
+    <div className = "center2">
     <h1 className = "header">Home</h1>
     <p className = "parragraph">
       Welcome to the Maroon & White Leadership Program matching application!
       Go to the upload tab to upload data, or clear existing data.
       Go to the results tab to view the results if you have already uploaded data.
     </p>
+    </div>
     </>
   );
 

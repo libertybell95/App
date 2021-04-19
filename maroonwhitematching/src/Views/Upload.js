@@ -130,6 +130,7 @@ deleteClickHandler = ()=>{
     if (this.state.loading) return <Loader />;
     if (this.state.error) return <CsvError />;
     return (
+      <div className = "center2">
       <div className="wrapper">
         <div className="section1">
           <div className="container">
@@ -169,6 +170,7 @@ deleteClickHandler = ()=>{
 
         <div className="section3">{this.state.showTable && <Table tabledata={this.state.tabledata} />}</div>
       </div>
+    </div>
     );
   }
 }
