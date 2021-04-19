@@ -102,7 +102,7 @@ Customer.findById = (customerId, result) => {
 
 
 Customer.getAll = result => {
-  pg.query("SELECT * FROM customers", (err, res) => {
+  pg.query("SELECT * FROM customer", (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);
