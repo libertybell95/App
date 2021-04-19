@@ -77,7 +77,7 @@ exports.findAll = (req, res) => {
   });
 };
 
-// Search record with  an "id" 
+// Search record with  an "id"
 exports.findOne = (req, res) => {
   Customer.findById(req.params.customerId, (err, data) => {
     if (err) {
@@ -111,7 +111,7 @@ exports.update = (req, res) => {
   console.log(req.body);
 
 // Calling the upadteById() form models
-// it returns an object { kind: "not_found" } when not found 
+// it returns an object { kind: "not_found" } when not found
 
   Customer.updateById(
     req.params.customerId,
