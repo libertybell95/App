@@ -30,7 +30,7 @@ class Upload extends Component {
   handleForce = (data, fileInfo) => {
     this.setState({ loading: true });
 
-    let d = JSON.stringify({ ...data });
+    let d = JSON.stringify({data});
 
     fetch("https://maroonandwhiteserver.herokuapp.com/bulkcreate", {
       method: "POST",
@@ -66,36 +66,32 @@ class Upload extends Component {
   //::::::::::: GET all data form MySQL table ::::::::::
 
   loadClickHandler = () => {
-    //
-    // this.setState({loading:true});
-    // fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
-    //   mode: 'no-cors',
-    //   headers: {
-    //     'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
-    //   },
-    // })
-    //   .then((response) => {
-    //     if (response.ok) {
-    //       this.setState({loading:false});
-    //       return response.json();
-    //     } else {
-    //       throw new Error("Something went wrong");
-    //     }
-    //   })
-    //   .then((data) => {
-    //     this.setState({tabledata:data});
-    //     this.setState({showTable:true});
-    //     console.log(data);
-    //   })
-    //   .catch((err) => {
-    //     this.setState({error:true});
-    //     console.log(err);
-    //
-    //   });
-    const url = "https://maroonandwhiteserver.herokuapp.com/customers";
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
+
+    this.setState({loading:true});
+    fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
+      mode: 'no-cors',
+      headers: {
+        'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          this.setState({loading:false});
+          return response.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
+      .then((data) => {
+        this.setState({tabledata:data});
+        this.setState({showTable:true});
+        console.log(data);
+      })
+      .catch((err) => {
+        this.setState({error:true});
+        console.log(err);
+
+      });
 
   };
 
