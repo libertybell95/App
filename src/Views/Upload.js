@@ -68,7 +68,12 @@ class Upload extends Component {
   loadClickHandler = () => {
     //
     this.setState({loading:true});
-    fetch("https://maroonandwhiteserver.herokuapp.com/customers")
+    fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
+      mode: 'no-cors',
+      headers: {
+        'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
+      },
+    })
       .then((response) => {
         if (response.ok) {
           this.setState({loading:false});
