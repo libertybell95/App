@@ -31,20 +31,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome" });
 });
 
-//Get all data from database
-app.get('/customers', async (req, res) => {
-    try {
-      const client = await pool.connect();
-      const result = await client.query('SELECT * FROM customer');
-      const results = { 'results': (result) ? result.rows : null};
-      res.render('/customers', results );
-      client.release();
-    } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
-    }
-  })
-
 require("./app/routes/customer.routes.js")(app);
 
 // set port, listen for requests

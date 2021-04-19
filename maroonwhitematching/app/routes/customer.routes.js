@@ -8,7 +8,7 @@ module.exports = app => {
   app.post("/customers", customers.create);
 
   // GET call to retrieve all the records present in table
-  app.get("/customers");
+  app.get("/customers", customers.findAll);
 
   // GET call to retrieve a single record with ID
   app.get("/customers/:customerId", customers.findOne);

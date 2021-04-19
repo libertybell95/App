@@ -1,11 +1,10 @@
 const { Pool } = require('pg');
-const pool = new Pool({
+const pg = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
 });
-
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // Defining a constructor for handling single records
