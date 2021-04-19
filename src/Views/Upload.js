@@ -32,7 +32,7 @@ class Upload extends Component {
 
     let d = JSON.stringify({ ...data });
 
-    fetch("https://maroonandwhiteserver.herokuapp.com//bulkcreate", {
+    fetch("https://maroonandwhiteserver.herokuapp.com/bulkcreate", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -66,7 +66,7 @@ class Upload extends Component {
   loadClickHandler = () => {
     //
     this.setState({loading:true});
-    fetch("https://maroonandwhiteserver.herokuapp.com//customers")
+    fetch("https://maroonandwhiteserver.herokuapp.com/customers")
       .then((response) => {
         if (response.ok) {
           this.setState({loading:false});
@@ -94,7 +94,7 @@ deleteClickHandler = ()=>{
   this.setState({ loaded: false });
 
 
-  fetch("https://maroonandwhiteserver.herokuapp.com//customers", {
+  fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
     method: "DELETE"
   })
     .then((response) => {
