@@ -150,7 +150,7 @@ deleteClickHandler = ()=>{
                 <a href="https://github.com/krishankantray/temp/blob/master/test.csv" target="_blank">Sample file</a>
                   <br/>
                   <i className="fas fa-exclamation-triangle" style={{color: " #e6b800"}}/>
-                  "id" column is Primary Key in the MySQL table ( i.e.  duplicates ID not allowed )
+                  "id" column is Primary Key in the Postgresql table ( i.e.  duplicates ID not allowed )
                 </p>
 
           </div>
@@ -162,18 +162,22 @@ deleteClickHandler = ()=>{
             <span>Load Table </span>
           </button>
 
-
-        {
-          (this.state.showTable)&&
-          <button className="button" style={{backgroundColor:"red"}} onClick={this.deleteClickHandler}>
-            <span>Wipe table </span>
-          </button>
-          }
+        //
+        // {
+        //   (this.state.showTable)&&
+        //   <button className="button" style={{backgroundColor:"red"}} onClick={this.deleteClickHandler}>
+        //     <span>Wipe table </span>
+        //   </button>
+        //   }
         </div>
 
 
         <div className="section3">{this.state.showTable && <Table tabledata={this.state.tabledata} />}</div>
       </div>
+
+      <button className="button" onClick={this.analyzeData}>
+        <span>Analyze data </span>
+      </button>
     </div>
     );
   }
