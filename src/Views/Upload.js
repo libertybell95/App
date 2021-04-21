@@ -136,25 +136,25 @@ deleteClickHandler = ()=>{
     return (
       <div className = "center2">
       <div className="wrapper">
-        <div className="section1">
-          <div className="container">
-                <CSVReader
-                  cssClass="react-csv-input"
-                  label="Select CSV  :"
-                  onFileLoaded={this.handleForce.bind(this)}
-                  parserOptions={this.papaparseOptions}
-                />
-                <p>
-                <i className="fas fa-exclamation-triangle" style={{color:"  #e6b800"}} />
-                CSV file of customers data should be like :
-                <a href="https://github.com/krishankantray/temp/blob/master/test.csv" target="_blank">Sample file</a>
-                  <br/>
-                  <i className="fas fa-exclamation-triangle" style={{color: " #e6b800"}}/>
-                  "id" column is Primary Key in the MySQL table ( i.e.  duplicates ID not allowed )
-                </p>
-
-          </div>
-        </div>
+        // <div className="section1">
+        //   <div className="container">
+        //         <CSVReader
+        //           cssClass="react-csv-input"
+        //           label="Select CSV  :"
+        //           onFileLoaded={this.handleForce.bind(this)}
+        //           parserOptions={this.papaparseOptions}
+        //         />
+        //         <p>
+        //         <i className="fas fa-exclamation-triangle" style={{color:"  #e6b800"}} />
+        //         CSV file of customers data should be like :
+        //         <a href="https://github.com/krishankantray/temp/blob/master/test.csv" target="_blank">Sample file</a>
+        //           <br/>
+        //           <i className="fas fa-exclamation-triangle" style={{color: " #e6b800"}}/>
+        //           "id" column is Primary Key in the MySQL table ( i.e.  duplicates ID not allowed )
+        //         </p>
+        //
+        //   </div>
+        // </div>
 
         <div className="section2">
 

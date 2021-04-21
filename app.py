@@ -18,11 +18,13 @@ def hello():
 
 @app.route("/add")
 def add_book():
+    book_id=request.args.get('id')
     name=request.args.get('name')
     author=request.args.get('author')
     published=request.args.get('published')
     try:
         book=Book(
+            id=book_id,
             name=name,
             author=author,
             published=published
