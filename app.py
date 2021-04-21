@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 
-app = Flask(__name__, static_folder='../build/', static_url_path='/')
+app = Flask(__name__, static_folder='build/', static_url_path='/')
 
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
