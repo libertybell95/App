@@ -7,7 +7,7 @@ const Styles = styled.div `
     margin: 20px 0 20px 0;
     border-collapse: collapse;
     font-size: 16px;
-    
+
     tr {
         border: 1px solid #ddd;
         padding: 8px;
@@ -35,7 +35,7 @@ const Styles = styled.div `
  .pagination{
     font-size: 18px;
  }
-  
+
 `
 
 function Table({columns, data}) {
@@ -91,7 +91,7 @@ function Table({columns, data}) {
             )
           })}
         </tbody>
-      </table>  
+      </table>
 
      {/* Pagination */}
      <div className="pagination">
@@ -153,23 +153,14 @@ function App(props) {
       Header: 'id',
       accessor: 'id'
     }, {
-      Header: 'level_col',
-      accessor: 'level_col'
+      Header: 'author',
+      accessor: 'author'
     }, {
-      Header: 'cvss',
-      accessor: 'cvss'
+      Header: 'name',
+      accessor: 'name'
     }, {
-      Header: 'title',
-      accessor: 'title'
-    },{
-      Header: 'vulnerability',
-      accessor: 'vulnerability'
-    },{
-      Header: 'solution',
-      accessor: 'solution'
-    },{
-      Header: 'reference_col',
-      accessor: 'reference_col'
+      Header: 'published',
+      accessor: 'published'
     }
   ]
 
