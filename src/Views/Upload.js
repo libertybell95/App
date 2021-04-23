@@ -92,7 +92,7 @@ deleteClickHandler = ()=>{
   this.setState({ loaded: false });
 
 
-  fetch("/delete/<id>", {
+  fetch("/delete", {
     method: "DELETE"
   })
     .then((response) => {
