@@ -40,17 +40,17 @@ def get_participants():
 def get_by_id(id_):
     try:
         book=Book.query.filter_by(id=id_).first()
-        return jsonify(book.serialize())
+
     except Exception as e:
 	    return(str(e))
 
 
 
 @app.route("/delete",methods=['DELETE'])
-def delete_by_id(id_):
+def delete():
     try:
-        book=Book.query.delete()
-        return "book deleted successfully"
+        book = db.session.query(Book).delete()
+        db.session.commit()
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
