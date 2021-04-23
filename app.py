@@ -45,16 +45,15 @@ def get_by_id(id_):
 	    return(str(e))
 
 
-
 @app.route("/delete",methods=['DELETE'])
 def delete():
-    try:
-        book = db.session.query(Book).delete()
-        db.session.commit()
-        return "Book deleted"
-    except Exception as e:
-	    return(str(e))
-    return render_template("Upload.js")
+    if request.method == 'POST':
+        try:
+            book = db.session.query(Book).delete()
+            db.session.commit()
+            return "Book deleted"
+        except Exception as e:
+    	    return(str(e))
 
 @app.route("/add/form",methods=['GET', 'POST'])
 def add_book_form():

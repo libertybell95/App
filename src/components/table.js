@@ -149,16 +149,15 @@ function App(props) {
   const data = Object.values(props.tabledata);
 
   const columns = [
-
     {
       Header: 'id',
       accessor: 'id'
     }, {
-      Header: 'name',
-      accessor: 'name'
-    }, {
       Header: 'author',
       accessor: 'author'
+    }, {
+      Header: 'name',
+      accessor: 'name'
     }, {
       Header: 'published',
       accessor: 'published'
