@@ -32,10 +32,9 @@ class Upload extends Component {
 
     let d = JSON.stringify({ ...data });
 
-    fetch("/getall", {
+    fetch("https://maroonandwhiteserver.herokuapp.com/bulkcreate", {
       method: "POST",
-      },
-      body: d,
+      body: d
     })
       .then((response) => {
         this.setState({ loading: false });
