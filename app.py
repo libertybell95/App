@@ -18,30 +18,11 @@ from models import Participant
 def hello():
     return app.send_static_file('index.html')
 
-@app.route("/add")
-def add_book():
-    book_id=request.args.get('id')
-    name=request.args.get('name')
-    author=request.args.get('author')
-    published=request.args.get('published')
-    try:
-        book=Book(
-            id=book_id,
-            name=name,
-            author=author,
-            published=published
-        )
-        db.session.add(book)
-        db.session.commit()
-        return "Book added. book id={}".format(book.id)
-    except Exception as e:
-	    return(str(e))
-
 @app.route("/getall",methods=['GET'])
 def get_all():
     try:
-        books=Book.query.all()
-        return  jsonify([e.serialize() for e in books])
+        participants=Participant.query.all()
+        return  jsonify([e.serialize() for e in participants])
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
