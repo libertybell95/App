@@ -61,7 +61,7 @@ class Upload extends Component {
 
   loadClickHandler = () => {
     this.setState({loading:true});
-    fetch('/getall', {
+    fetch('/delete/:id', {
       method: "GET"
     })
       .then((response) => {

@@ -44,6 +44,14 @@ def get_by_id(id_):
     except Exception as e:
 	    return(str(e))
 
+@app.route("/delete/<id_>")
+def get_by_id(id_):
+    try:
+        book=Book.query.filter_by(id=id_).delete()
+        return "book deleted successfully"
+    except Exception as e:
+	    return(str(e))
+
 @app.route("/add/form",methods=['GET', 'POST'])
 def add_book_form():
     if request.method == 'POST':
