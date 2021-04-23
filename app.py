@@ -40,17 +40,17 @@ def add_book():
 @app.route("/getall",methods=['GET'])
 def get_all():
     try:
-        participants=Participant.query.all()
-        return  jsonify([e.serialize() for e in participants])
+        books=Book.query.all()
+        return  jsonify([e.serialize() for e in books])
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
 
-@app.route("/user")
+@app.route("/participants")
 def get_user():
     try:
-        users=User.query.all()
-        return  jsonify([e.serialize() for e in users])
+        participants=Participant.query.all()
+        return  jsonify([e.serialize() for e in participants])
     except Exception as e:
 	    return(str(e))
 
