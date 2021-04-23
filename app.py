@@ -44,6 +44,14 @@ def get_all():
 	    return(str(e))
     return render_template("Upload.js")
 
+@app.route("/analyze")
+def get_all():
+    try:
+        users=User.query.all()
+        return  jsonify([e.serialize() for e in users])
+    except Exception as e:
+	    return(str(e))
+
 
 @app.route("/get/<id_>")
 def get_by_id(id_):
