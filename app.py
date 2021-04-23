@@ -18,7 +18,7 @@ from models import Participant
 def hello():
     return app.send_static_file('index.html')
 
-@app.route("/getall",methods=['GET', 'DELETE'])
+@app.route("/getall",methods=['GET'])
 def get_all():
     try:
         books=Book.query.all()
@@ -44,8 +44,9 @@ def get_by_id(id_):
     except Exception as e:
 	    return(str(e))
 
+
 @app.route("/delete/<id_>")
-def get_by_id(id_):
+def delete_by_id(id_):
     try:
         book=Book.query.filter_by(id=id_).delete()
         return "book deleted successfully"
@@ -70,6 +71,3 @@ def add_book_form():
         except Exception as e:
             return(str(e))
     return render_template("getdata.html")
-
-if __name__ == '__main__':
-    app.run()
