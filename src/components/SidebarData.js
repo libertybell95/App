@@ -4,6 +4,9 @@ import {AiOutlinePoweroff} from 'react-icons/ai';
 import {ImFolderUpload} from 'react-icons/im';
 import {GoGraph} from 'react-icons/go';
 import {GrPowerShutdown} from 'react-icons/gr';
+import {FiSettings} from 'react-icons/fi';
+
+
 
 export const SidebarData = [
   {
@@ -22,6 +25,12 @@ export const SidebarData = [
     title: 'Results',
     path: '/Results',
     icon: <GoGraph className = "icon"/>,
+    className: 'nav-text'
+  },
+  {
+    title: 'Settings',
+    path: '/Settings',
+    icon: <FiSettings className = "icon"/>,
     className: 'nav-text'
   },
   {

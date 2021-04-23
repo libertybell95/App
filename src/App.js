@@ -6,6 +6,9 @@ import LogoutButton from './components/LogoutButton';
 import User from './components/User';
 import Sidebarhome from './Views/Sidebarhome';
 import { useAuth0 } from '@auth0/auth0-react';
+import JSONPretty from 'react-json-pretty';
+
+
 
 
 function App() {

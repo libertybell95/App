@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar.js';
 import HomePage from './HomePage';
 import Results from './Results';
 import Upload from './Upload';
+import Settings from './Settings';
 import LogoutButton from '../components/LogoutButton';
 
 function Sidebarhome() {
@@ -17,6 +18,7 @@ function Sidebarhome() {
             <Route path='/' exact component={HomePage} />
             <Route path='/Results' component={Results} />
             <Route path='/Upload' component={Upload} />
+            <Route path='/Settings' component={Settings} />
             <Route path='/Logout'>
               <LogoutButton />
             </Route>

@@ -13,14 +13,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: left;
-  padding: -5px 0px 0px 16px;
+  padding: -5px 0px 0px 8px;
   list-style: none;
-  height: 180px;
+  height: 150px;
 }
 
 .icon{
   color: white;
-  font-size: 80px;
+  font-size: 70px;
 }
 .icon:hover{
   font-size: 90px;
