@@ -59,18 +59,18 @@ class Participant(db.Model):
     preference = db.Column(db.String(100))
     feedback = db.Column(db.String(100))
     meeting = db.Column(db.String(100))
-    areaPreference = db.Column(db.String(100))
+    area_preference = db.Column(db.String(100))
     gain = db.Column(db.String(100))
     consideration = db.Column(db.String(100))
     role = db.Column(db.String(100))
-    timeStamp = db.Column(db.String(100))
+    timestamp = db.Column(db.String(100))
     pref1 = db.Column(db.String(100))
     pref2 = db.Column(db.String(100))
     pref3 = db.Column(db.String(100))
     comment = db.Column(db.String(100))
     uid = db.Column(db.String(100))
 
-    def __init__(self, name, major, interest, leader, role_model, myself, personality, preference, meeting, areaPreference, gain, consideration, role, timeStamp, pref1, pref2, pref3, comment, uid):
+    def __init__(self, name, major, interest, leader, role_model, myself, personality, preference, meeting, area_preference, gain, consideration, role, timestamp, pref1, pref2, pref3, comment, uid):
         self.name = name
         self.major = major
         self.interest = interest
@@ -81,11 +81,11 @@ class Participant(db.Model):
         self.preference = preference
         self.feedback = feedback
         self.meeting = meeting
-        self.areaPreference = areaPreference
+        self.area_preference = area_preference
         self.gain = gain
         self.consideration = consideration
         self.role = role
-        self.timeStamp = timeStamp
+        self.timestamp = timestamp
         self.pref1 = pref1
         self.pref2 = pref2
         self.pref3 = pref3
@@ -108,11 +108,11 @@ class Participant(db.Model):
             'preference': self.preference,
             'feedback': self.feedback,
             'meeting': self.meeting,
-            'areaPreference': self.areaPreference,
+            'area_preference': self.area_preference,
             'gain': self.gain,
             'consideration': self.gain,
             'role': self.role,
-            'timeStamp': self.timeStamp,
+            'timestamp': self.timestamp,
             'pref1': self.pref1,
             'pref2': self.pref2,
             'pref3': self.pref3,

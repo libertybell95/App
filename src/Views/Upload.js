@@ -98,7 +98,7 @@ deleteClickHandler = ()=>{
   this.setState({ loaded: false });
 
 
-  fetch("https://maroonandwhiteserver.herokuapp.com/customers", {
+  fetch("/getall", {
     method: "DELETE"
   })
     .then((response) => {
@@ -162,7 +162,7 @@ deleteClickHandler = ()=>{
             <span>Load Table </span>
           </button>
 
-        
+
         {
           (this.state.showTable)&&
           <button className="button" style={{backgroundColor:"red"}} onClick={this.deleteClickHandler}>
