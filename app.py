@@ -18,11 +18,11 @@ from models import Participant
 def hello():
     return app.send_static_file('index.html')
 
-@app.route("/getall",methods=['GET'])
+@app.route("/getall",methods=['GET', 'DELETE'])
 def get_all():
     try:
-        participants=Participant.query.all()
-        return  jsonify([e.serialize() for e in participants])
+        books=Book.query.all()
+        return  jsonify([e.serialize() for e in books])
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")

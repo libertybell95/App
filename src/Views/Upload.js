@@ -32,13 +32,8 @@ class Upload extends Component {
 
     let d = JSON.stringify({ ...data });
 
-    fetch("https://maroonandwhiteserver.herokuapp.com/bulkcreate", {
+    fetch("/getall", {
       method: "POST",
-      mode: 'no-cors',
-      headers: {
-        'Access-Control-Allow-Origin': 'https://maroonandwhite-matching.herokuapp.com',
-        Accept: "application/json",
-        "Content-Type": "application/json",
       },
       body: d,
     })

@@ -149,6 +149,71 @@ function App(props) {
   const data = Object.values(props.tabledata);
 
   const columns = [
+    // {
+    //   Header: 'id',
+    //   accessor: 'id'
+    // }, {
+    //   Header: 'name',
+    //   accessor: 'name'
+    // }, {
+    //   Header: 'major',
+    //   accessor: 'major'
+    // }, {
+    //   Header: 'interest',
+    //   accessor: 'interest'
+    // }, {
+    //   Header: 'leader',
+    //   accessor: 'leader'
+    // }, {
+    //   Header: 'role_model',
+    //   accessor: 'role_model'
+    // }, {
+    //   Header: 'myself',
+    //   accessor: 'myself'
+    // }, {
+    //   Header: 'personality',
+    //   accessor: 'personality'
+    // }, {
+    //   Header: 'preference',
+    //   accessor: 'preference'
+    // }, {
+    //   Header: 'feedback',
+    //   accessor: 'feedback'
+    // }, {
+    //   Header: 'meeting',
+    //   accessor: 'meeting'
+    // }, {
+    //   Header: 'areaPreference',
+    //   accessor: 'areaPreference'
+    // }, {
+    //   Header: 'gain',
+    //   accessor: 'gain'
+    // }, {
+    //   Header: 'consideration',
+    //   accessor: 'consideration'
+    // }, {
+    //   Header: 'role',
+    //   accessor: 'role'
+    // }, {
+    //   Header: 'timeStamp',
+    //   accessor: 'timeStamp'
+    // }, {
+    //   Header: 'pref1',
+    //   accessor: 'pref1'
+    // }, {
+    //   Header: 'pref2',
+    //   accessor: 'pref2'
+    // }, {
+    //   Header: 'pref3',
+    //   accessor: 'pref3'
+    // }, {
+    //   Header: 'comment',
+    //   accessor: 'comment'
+    // }, {
+    //   Header: 'uid',
+    //   accessor: 'uid'
+    // }
+
     {
       Header: 'id',
       accessor: 'id'
@@ -156,62 +221,11 @@ function App(props) {
       Header: 'name',
       accessor: 'name'
     }, {
-      Header: 'major',
-      accessor: 'major'
+      Header: 'author',
+      accessor: 'author'
     }, {
-      Header: 'interest',
-      accessor: 'interest'
-    }, {
-      Header: 'leader',
-      accessor: 'leader'
-    }, {
-      Header: 'role_model',
-      accessor: 'role_model'
-    }, {
-      Header: 'myself',
-      accessor: 'myself'
-    }, {
-      Header: 'personality',
-      accessor: 'personality'
-    }, {
-      Header: 'preference',
-      accessor: 'preference'
-    }, {
-      Header: 'feedback',
-      accessor: 'feedback'
-    }, {
-      Header: 'meeting',
-      accessor: 'meeting'
-    }, {
-      Header: 'areaPreference',
-      accessor: 'areaPreference'
-    }, {
-      Header: 'gain',
-      accessor: 'gain'
-    }, {
-      Header: 'consideration',
-      accessor: 'consideration'
-    }, {
-      Header: 'role',
-      accessor: 'role'
-    }, {
-      Header: 'timeStamp',
-      accessor: 'timeStamp'
-    }, {
-      Header: 'pref1',
-      accessor: 'pref1'
-    }, {
-      Header: 'pref2',
-      accessor: 'pref2'
-    }, {
-      Header: 'pref3',
-      accessor: 'pref3'
-    }, {
-      Header: 'comment',
-      accessor: 'comment'
-    }, {
-      Header: 'uid',
-      accessor: 'uid'
+      Header: 'published',
+      accessor: 'published'
     }
   ]
 
