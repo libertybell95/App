@@ -12,6 +12,7 @@ db = SQLAlchemy(app)
 
 from models import Book
 from models import User
+from models import Participant
 
 @app.route("/")
 def hello():
@@ -39,8 +40,8 @@ def add_book():
 @app.route("/getall",methods=['GET'])
 def get_all():
     try:
-        books=Book.query.all()
-        return  jsonify([e.serialize() for e in books])
+        participants=Participant.query.all()
+        return  jsonify([e.serialize() for e in participants])
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
