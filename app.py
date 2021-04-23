@@ -11,6 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from models import Book
+from models import User
 
 @app.route("/")
 def hello():
@@ -18,11 +19,13 @@ def hello():
 
 @app.route("/add")
 def add_book():
+    book_id=request.args.get('id')
     name=request.args.get('name')
     author=request.args.get('author')
     published=request.args.get('published')
     try:
         book=Book(
+            id=book_id,
             name=name,
             author=author,
             published=published
@@ -41,6 +44,14 @@ def get_all():
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
+
+@app.route("/user")
+def get_user():
+    try:
+        users=User.query.all()
+        return  jsonify([e.serialize() for e in users])
+    except Exception as e:
+	    return(str(e))
 
 
 @app.route("/get/<id_>")
