@@ -51,6 +51,7 @@ def delete():
     try:
         book = db.session.query(Book).delete()
         db.session.commit()
+        return "Book deleted"
     except Exception as e:
 	    return(str(e))
     return render_template("Upload.js")
