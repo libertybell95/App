@@ -44,8 +44,8 @@ def get_all():
 	    return(str(e))
     return render_template("Upload.js")
 
-@app.route("/analyze")
-def get_all():
+@app.route("/user")
+def get_user():
     try:
         users=User.query.all()
         return  jsonify([e.serialize() for e in users])

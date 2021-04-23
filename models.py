@@ -18,8 +18,26 @@ class Book(db.Model):
 
     def serialize(self):
         return {
-            'id': self.id, 
+            'id': self.id,
             'name': self.name,
             'author': self.author,
             'published':self.published
+        }
+
+class User(db.Model):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+
+    def __init__(self, name, author, published):
+        self.name = name
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name
         }
