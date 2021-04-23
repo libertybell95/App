@@ -47,7 +47,7 @@ def get_all():
     return render_template("Upload.js")
 
 @app.route("/participants")
-def get_user():
+def get_participants():
     try:
         participants=Participant.query.all()
         return  jsonify([e.serialize() for e in participants])

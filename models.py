@@ -48,7 +48,7 @@ class User(db.Model):
 class Participant(db.Model):
     __tablename__ = 'participants'
 
-    id = db.Column(db.String(100))
+    id = db.Column(db.String(100), primary_key=True)
     name = db.Column(db.String(100))
     major = db.Column(db.String(100))
     interest = db.Column(db.String(100))
@@ -70,8 +70,7 @@ class Participant(db.Model):
     comment = db.Column(db.String(100))
     uid = db.Column(db.String(100))
 
-    def __init__(self, id, name, major, interest, leader, role_model, myself, personality, preference, meeting, areaPreference, gain, consideration, role, timeStamp, pref1, pref2, pref3, comment, uid):
-        self.id = id
+    def __init__(self, name, major, interest, leader, role_model, myself, personality, preference, meeting, areaPreference, gain, consideration, role, timeStamp, pref1, pref2, pref3, comment, uid):
         self.name = name
         self.major = major
         self.interest = interest
