@@ -162,13 +162,13 @@ deleteClickHandler = ()=>{
             <span>Load Table </span>
           </button>
 
-        //
-        // {
-        //   (this.state.showTable)&&
-        //   <button className="button" style={{backgroundColor:"red"}} onClick={this.deleteClickHandler}>
-        //     <span>Wipe table </span>
-        //   </button>
-        //   }
+        
+        {
+          (this.state.showTable)&&
+          <button className="button" style={{backgroundColor:"red"}} onClick={this.deleteClickHandler}>
+            <span>Wipe table </span>
+          </button>
+          }
         </div>
 
 
